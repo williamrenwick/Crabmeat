@@ -1,14 +1,16 @@
 $(document).ready( function(){
 	var controller;
-	var $title = $("#titlewrapper");
-	var $headlineX = $title.width() / 2 ;
-	var $headlineY = $title.height() / 2;
+
+	var $titlewrappers = $(".titlewrapper");
+	var $headlineX = $titlewrappers.width() / 2 ;
+	var $headlineY = $titlewrappers.height() / 2;
 	var $scrollind = $("#scrolldown").width() / 2;
 
-	$title.css({"margin-top": - $headlineY, "margin-left": - $headlineX});
+	$titlewrappers.css({
+		"margin-top": - $headlineY,
+		"margin-left": - $headlineX
+	});
 
-	$("#titlewrapper2").css({"margin-top": - $headlineY, "margin-left": - $headlineX});
-	$("#titlewrapper3").css({"margin-top": - $headlineY, "margin-left": - $headlineX});
 	$("#scrolldown").css({"margin-left": - $scrollind});
 
 	$(window).scroll(function() {
@@ -17,7 +19,6 @@ $(document).ready( function(){
 		} else {
 			$('#scrolldown').addClass("hide");
 		}
-		console.log(scroll);
 	});
 
 	controller = new ScrollMagic();
@@ -77,6 +78,23 @@ $(document).ready( function(){
 
 		var scene = new ScrollScene({triggerElement: "#trigger2", duration: 600})
 			.setTween(title3in)
+			.addTo(controller);
+
+		var title3out = TweenMax.to("#titlewrapper3", 0.7,
+			{ "left": "-50%" }
+		);
+
+		var scene = new ScrollScene({triggerElement: "#trigger3", duration: 600})
+					.setTween(title3out)
+					.addTo(controller)
+
+		var title4in = TweenMax.fromTo("#titlewrapper4", 0.7,
+			{"left": "150%"},
+			{"left": "50%" }
+		);
+
+		var scene = new ScrollScene({triggerElement: "#trigger3", duration: 600})
+			.setTween(title4in)
 			.addTo(controller);
 
 })

@@ -4,23 +4,7 @@ body {
 }
 
 /* line 10, ../scss/main.scss */
-#titlewrapper {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 600px;
-}
-
-/* line 16, ../scss/main.scss */
-#titlewrapper2 {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 600px;
-}
-
-/* line 22, ../scss/main.scss */
-#titlewrapper3 {
+.titlewrapper {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -197,6 +181,16 @@ h1 {
   background-repeat: no-repeat;
 }
 
+#guitar {
+  width: 172px;
+  height: 497px;
+  min-width: 286px;
+  background-image: url(../img/guitar.png);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* line 158, ../scss/main.scss */
 .strike {
   text-decoration: line-through;
@@ -211,5 +205,4 @@ h1 {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 30%;
 }
