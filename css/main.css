@@ -205,11 +205,11 @@ h1 {
 
 /* line 162, ../scss/main.scss */
 #poop {
-  width: 100px;
-  height: 100px;
-  min-width: 286px;
-  background-image: url(../img/poop-01.png);
+  width: 160px;
+  height: 160px;
+  background-image: url(../img/poop-01.svg);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  margin-bottom: 30%;
 }
